@@ -1,0 +1,16 @@
+* C:\Users\daris\Boost_converter\Boostconverter\ltspice\boost_converter.asc
+V1 vin 0 5
+L1 vin N001 200µ
+D1 N001 vout MBRS140
+C1 vout 0 10µ
+R1 vout 0 118.518
+M1 N001 N002 0 0 IRF510
+V2 N002 0 PULSE(0 7 0 0 0 5.833u 10u)
+.model D D
+.lib C:\Users\daris\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\Users\daris\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 10m
+.backanno
+.end
